@@ -201,15 +201,14 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\TestsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="App_Data\AccountViewModels.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Models\IdentityModels.cs" />
-    <Compile Include="App_Data\ManageViewModels.cs" />
     <Compile Include="Models\UserBAL.cs" />
     <Compile Include="Persistence\DAO.cs" />
     <Compile Include="Persistence\MockDAO.cs" />
@@ -272,12 +271,15 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
-    <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Tests\Test.cshtml" />
-    <Content Include="Views\Tests\Form.cshtml" />
-    <Content Include="Views\Tests\Result.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Result.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Account\Welcome.cshtml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />

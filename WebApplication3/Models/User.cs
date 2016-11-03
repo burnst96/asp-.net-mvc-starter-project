@@ -26,18 +26,14 @@ namespace WebApplication3.Models
         public User(String username, String password)
         {
 
-            MockDAO dao = new MockDAO();
-
             this.username = username;
             this.password = password;
-            this.id = dao.generateNewUserID();
+            this.id = MockDAO.generateNewUserID();
         }
 
         public User()
         {
-            MockDAO dao = new MockDAO();
-
-            id = dao.generateNewUserID();
+            id = MockDAO.generateNewUserID();
         }
     }
 }

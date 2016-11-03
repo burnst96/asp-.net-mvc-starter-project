@@ -17,28 +17,5 @@ namespace WebApplication3.Controllers
             return View();
         }
 
-        [HttpGet]
-        public ActionResult Form()
-        {
-            return View();
-        }
-
-        [HttpPost]
-        [ValidateInput(true)]
-        public ActionResult Form(User u)
-        {
-            if(ModelState.IsValid)
-            {
-                String upper = u.username.First().ToString().ToUpper();
-                String lower = u.username.Substring(1);
-                u.username = upper + lower;
-
-                return View("Result", u);
-            } else
-            {
-                return View();
-            }
-        }
-
     }
 }

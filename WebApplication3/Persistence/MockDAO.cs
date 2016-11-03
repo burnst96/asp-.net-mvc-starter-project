@@ -7,32 +7,32 @@ using WebApplication3.Models;
 
 namespace WebApplication3.Persistence
 {
-    public class MockDAO : DAO
+    public static class MockDAO
     {
 
-        SortedList Users = new SortedList();
+        static SortedList Users = new SortedList();
 
-        public int generateNewUserID()
+        public static int generateNewUserID()
         {
             return Users.Count;
         }
 
-        public void Create(string tableName, User user)
+        public static void Create(string tableName, User user)
         {
-            Users.Add(user.id,user);
+            //NO FUNCTION
         }
 
-        public void Delete(string tableName, int id)
+        public static void Delete(string tableName, int id)
         {
             Users.Remove(id);
         }
 
-        public User Select(string tableName, int id)
+        public static User Select(string tableName, int id)
         {
             return (User) Users.GetByIndex(Users.IndexOfKey(id));
         }
 
-        public void Update(string tableName, int id, User user)
+        public static void Update(string tableName, int id, User user)
         {
             int originalIndex = Users.IndexOfKey(id);
 
@@ -41,6 +41,11 @@ namespace WebApplication3.Persistence
                 Users.Remove(originalIndex);
                 Users.Add(id,user);
             }
+        }
+
+        public static void Insert(string tableName, User user)
+        {
+            Users.Add(user.id, user);
         }
     }
 }

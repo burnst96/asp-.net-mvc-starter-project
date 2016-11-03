@@ -13,8 +13,16 @@ namespace WebApplication3.Persistence
 
         public OracleDAO()
         {
+            /* Uncomment once database has been created
             connect.ConnectionString = "Data Source=digitaldev/letmein@//localhost:1521/;";
             connect.Open();
+            */
+        }
+
+        public Boolean checkConnection()
+        {
+            //return connect.State > 0 ? true : false;
+            return false;
         }
 
         public void Create(string tableName, User user)
@@ -24,6 +32,11 @@ namespace WebApplication3.Persistence
 
         public void Delete(string tableName, int id)
         {
+        }
+
+        public void Insert(string tableName, User user)
+        {
+            throw new NotImplementedException();
         }
 
         public User Select(string tableName, int id)

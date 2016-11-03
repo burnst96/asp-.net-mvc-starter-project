@@ -1,0 +1,8 @@
+﻿@model WebApplication3.Models.User
+
+@{
+    ViewBag.Title = "Welcome";
+}
+<h2>Welcome, @Html.DisplayFor(u => u.username)</h2>
+<br />
+@Html.ActionLink("To Homepage", "Index", "Home");

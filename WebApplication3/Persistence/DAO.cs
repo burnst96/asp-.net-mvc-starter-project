@@ -11,6 +11,7 @@ namespace WebApplication3.Persistence
     interface DAO
     {
         User Select(String tableName, int id);
+        void Insert(String tableName, User user);
         void Create(String tableName, User user);
         void Update(String tableName, int id, User user);
         void Delete(String tableName, int id);
