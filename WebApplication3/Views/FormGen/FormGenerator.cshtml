@@ -1,0 +1,22 @@
+﻿@model WebApplication3.Models.FGHelper
+
+@{
+    ViewBag.Title = "FormGenerator";
+}
+
+<h2>FormGenerator</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.DisplayNameFor(m => m.title)
+    @Html.TextBoxFor(m => m.title)
+    <br />
+    @Html.ValidationMessageFor(m => m.title)
+    <br />
+
+    @Html.DisplayNameFor(m => m.desc)
+    @Html.TextBoxFor(m => m.desc)
+    <br />
+    @Html.ValidationMessageFor(m => m.desc)
+    <br />
+}

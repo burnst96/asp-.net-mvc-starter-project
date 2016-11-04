@@ -46,7 +46,7 @@ namespace WebApplication3.Controllers
             } else
             {
                 //If Database Is Down or Not Running, Store All Details In Memory
-                MockDAO.Insert("", u);
+                MockDAO.Insert(u);
             }
             return View("Welcome", u);
         }

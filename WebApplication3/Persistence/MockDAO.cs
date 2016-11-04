@@ -17,22 +17,22 @@ namespace WebApplication3.Persistence
             return Users.Count;
         }
 
-        public static void Create(string tableName, User user)
+        public static void Create(User user)
         {
-            //NO FUNCTION
+            //NO FUNCTION CURRENTLY
         }
 
-        public static void Delete(string tableName, int id)
+        public static void Delete(int id)
         {
             Users.Remove(id);
         }
 
-        public static User Select(string tableName, int id)
+        public static User Select(int id)
         {
             return (User) Users.GetByIndex(Users.IndexOfKey(id));
         }
 
-        public static void Update(string tableName, int id, User user)
+        public static void Update(int id, User user)
         {
             int originalIndex = Users.IndexOfKey(id);
 
@@ -43,7 +43,7 @@ namespace WebApplication3.Persistence
             }
         }
 
-        public static void Insert(string tableName, User user)
+        public static void Insert(User user)
         {
             Users.Add(user.id, user);
         }

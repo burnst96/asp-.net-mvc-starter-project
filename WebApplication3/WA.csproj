@@ -202,11 +202,15 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\FormGenController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\TestsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="GPO\Course.cs" />
+    <Compile Include="GPO\Programme.cs" />
+    <Compile Include="Models\FGHelper.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\UserBAL.cs" />
@@ -276,6 +280,8 @@
     <Content Include="Views\Account\Result.cshtml" />
     <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Account\Welcome.cshtml" />
+    <Content Include="Views\FormGen\FormGenerator.cshtml" />
+    <Content Include="Views\FormGen\DynamicFormPage.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

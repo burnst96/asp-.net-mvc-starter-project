@@ -9,7 +9,7 @@ namespace WebApplication3.Models
     {
         public User getUser()
         {
-            User u = new Models.User("user","pass");
+            User u = new Models.User("mockuser","mockpass");
             return u;
         }
     }

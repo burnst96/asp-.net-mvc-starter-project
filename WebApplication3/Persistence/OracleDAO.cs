@@ -36,7 +36,6 @@ namespace WebApplication3.Persistence
 
         public void Insert(string tableName, User user)
         {
-            throw new NotImplementedException();
         }
 
         public User Select(string tableName, int id)
